@@ -41,14 +41,16 @@ app = FastAPI(
 )
 
 # ── CORS ─────────────────────────────────────────────────────────────
-# In production, we want to be flexible but secure. 
-# We combine the configured origins with a wildcard for easier testing.
-origins = list(set(settings.ALLOWED_ORIGINS + ["*"]))
-
+# Note: allow_credentials=True is incompatible with allow_origins=["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Temporarily using wildcard to guarantee it works for your demo
-    allow_credentials=True,
+    allow_origins=[
+        "https://homey-conveyancing-ai.vercel.app",
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "*"
+    ],
+    allow_credentials=False, # Must be False for wildcard support
     allow_methods=["*"],
     allow_headers=["*"],
 )
