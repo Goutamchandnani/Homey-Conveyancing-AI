@@ -23,22 +23,16 @@ MAX_RETRIES = 1
 
 
 def _get_client() -> genai.Client:
-    """Get a configured Gemini client instance."""
-    return genai.Client(api_key=settings.GEMINI_API_KEY)
+    """Get a configured Gemini client instance with a 30s timeout."""
+    return genai.Client(
+        api_key=settings.GEMINI_API_KEY,
+        http_options={"timeout": 30000}
+    )
 
 
 async def analyse_document(document_text: str) -> dict[str, Any]:
     """
-    Run all three analysis tasks in parallel:
-    1. Plain-English summary
-    2. Key data extraction (JSON)
-    3. Risk flags (JSON array)
-
-    Args:
-        document_text: Full extracted text from the document.
-
-    Returns:
-        Dict with keys: summary, extracted_data, risk_flags.
+    Run all three analysis tasks in parallel.
     """
     logger.info("Starting parallel Gemini analysis (summary + extraction + flags)")
 
@@ -82,9 +76,6 @@ async def _generate_summary(document_text: str) -> str:
         client.models.generate_content,
         model=settings.LLM_MODEL,
         contents=SUMMARY_SYSTEM_PROMPT + "\n\n" + user_content,
-        config={
-            "http_options": {"timeout": 30000}  # 30 seconds in ms
-        }
     )
 
     summary = response.text.strip()
@@ -103,9 +94,6 @@ async def _generate_extraction(
         client.models.generate_content,
         model=settings.LLM_MODEL,
         contents=EXTRACTION_SYSTEM_PROMPT + "\n\n" + user_content,
-        config={
-            "http_options": {"timeout": 30000}
-        }
     )
 
     raw_text = response.text.strip()
@@ -136,9 +124,6 @@ async def _generate_flags(
         client.models.generate_content,
         model=settings.LLM_MODEL,
         contents=FLAGS_SYSTEM_PROMPT + "\n\n" + user_content,
-        config={
-            "http_options": {"timeout": 30000}
-        }
     )
 
     raw_text = response.text.strip()
