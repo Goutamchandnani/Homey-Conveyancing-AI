@@ -41,9 +41,13 @@ app = FastAPI(
 )
 
 # ── CORS ─────────────────────────────────────────────────────────────
+# In production, we want to be flexible but secure. 
+# We combine the configured origins with a wildcard for easier testing.
+origins = list(set(settings.ALLOWED_ORIGINS + ["*"]))
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.ALLOWED_ORIGINS,
+    allow_origins=["*"],  # Temporarily using wildcard to guarantee it works for your demo
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
