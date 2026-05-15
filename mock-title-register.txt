@@ -1,0 +1,41 @@
+HM LAND REGISTRY
+
+TITLE NUMBER: LN987654
+EDITION DATE: 12 JANUARY 2024
+
+A: PROPERTY REGISTER
+This register describes the land and estate comprised in the title.
+
+1. (01.06.2015) The Leasehold land shown edged with red on the plan of the above Title filed at the Registry and being 15 Windsor Court, Mayfair, London, W1J 7JZ.
+
+2. (01.06.2015) The Mines and Minerals are excepted.
+
+3. (01.06.2015) Short particulars of the lease(s) (or under-lease(s)) under which the land is held:
+   Date: 25 May 2015
+   Term: 125 years from 1 January 2015
+   Parties: (1) Windsor Estate Management Ltd (2) Robert Vance
+
+B: PROPRIETORSHIP REGISTER
+This register specifies the class of title and identifies the owner. It contains any entries that affect the right of disposal.
+
+TITLE ABSOLUTE
+
+1. (15.08.2021) PROPRIETOR: AMELIA CLARKE of 15 Windsor Court, London, W1J 7JZ.
+
+2. (15.08.2021) The price stated to have been paid on 15 August 2021 was £850,000.
+
+3. (15.08.2021) RESTRICTION: No disposition of the registered estate by the proprietor of the registered estate is to be registered without a written consent signed by the proprietor for the time being of the Charge dated 10 August 2021 in favour of BARCLAYS BANK UK PLC referred to in the Charges Register.
+
+C: CHARGES REGISTER
+This register contains any charges and other matters that affect the land.
+
+1. (15.08.2021) REGISTERED CHARGE dated 10 August 2021.
+
+2. (15.08.2021) Proprietor: BARCLAYS BANK UK PLC (Co. Regn. No. 9740322) of P.O. Box 187, Leeds, LS11 1AN.
+
+3. (01.06.2015) A Transfer of the land in this title dated 25 May 2015 contains the following restrictive covenant:
+   "The Transferee hereby covenants with the Transferor not to make any internal structural alterations or additions to the Property without the prior written consent of the Landlord, such consent not to be unreasonably withheld or delayed."
+
+4. (01.06.2015) The land is subject to rights of way for the benefit of the adjoining properties to use the communal bin stores and bicycle storage areas located in the basement.
+
+END OF REGISTER
