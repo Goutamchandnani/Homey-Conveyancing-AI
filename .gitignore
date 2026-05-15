@@ -14,3 +14,6 @@ dist/
 .DS_Store
 *.log
 backend/chroma_db/
+
+# Exclude all markdown files
+*.md
